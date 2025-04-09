@@ -31,6 +31,7 @@ h2 {
   margin: 25px 0 15px 0;
   color: #007BFF;
   text-align: center;
+  font-size: 1.5em;
 }
 
 .education-entry,
@@ -57,8 +58,14 @@ h2 {
 }
 
 .non-technical-skills li {
-  list-style-type: "- ";
+  list-style-type: none;
   margin-bottom: 5px;
+}
+
+/* Add hyphen only to items after the first one (Leadership) */
+.non-technical-skills li:not(:first-child)::before {
+  content: "- ";
+  /* Optional: Add margin-right: 5px; if more space is needed */
 }
 
 .certifications ul {
@@ -84,4 +91,42 @@ a:hover {
 p {
   margin: 5px 0;
   line-height: 1.5;
+}
+
+/* Reduce font sizes on smaller screens */
+@media (max-width: 768px) {
+  body {
+    font-size: 0.8em; /* Further reduced base font size */
+  }
+
+  h1 {
+    font-size: 1.5em; /* Further reduced h1 size */
+  }
+
+  h2 {
+    font-size: 1.1em; /* Further reduced h2 size */
+  }
+
+  /* Reduce font size for specific sections to help maintain layout */
+  .education-entry,
+  .work-entry,
+  .skills-row,
+  .non-technical-skills,
+  .certifications li {
+    font-size: 0.75em; /* Smaller font for these sections */
+  }
+
+  /* Align non-technical skills list left on small screens */
+  .non-technical-skills ul {
+    padding-left: 0;
+  }
+
+  /* Optionally adjust container padding */
+  .container {
+    padding: 20px;
+  }
+
+  /* Reduce font size for certification items to keep them inline */
+  /* .certifications li { <= Removed duplicate rule } */
+    /* font-size: 0.75em; */ 
 }
