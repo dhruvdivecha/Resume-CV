@@ -97,6 +97,7 @@ p {
 @media (max-width: 768px) {
   body {
     font-size: 0.8em; /* Further reduced base font size */
+    padding: 0.5rem; /* Remove body padding on small screens */
   }
 
   h1 {
@@ -123,7 +124,9 @@ p {
 
   /* Optionally adjust container padding */
   .container {
-    padding: 20px;
+    padding: 0; /* Remove container padding on small screens */
+    background: transparent; /* Remove container background */
+    box-shadow: none; /* Remove container shadow */
   }
 
   /* Reduce font size for certification items to keep them inline */
