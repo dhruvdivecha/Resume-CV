@@ -79,6 +79,10 @@ h2 {
   margin-bottom: 10px;
 }
 
+.certifications li span {
+  margin-top: 5px; /* Add space between cert name and date */
+}
+
 a {
   color: #333;
   text-decoration: none;
@@ -132,4 +136,51 @@ p {
   /* Reduce font size for certification items to keep them inline */
   /* .certifications li { <= Removed duplicate rule } */
     /* font-size: 0.75em; */ 
+}
+
+/* Projects Section Styles */
+.project-entry {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.project-details {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 10px 0;
+}
+
+.project-details li {
+  position: relative;
+  padding-left: 15px;
+  margin-bottom: 5px;
+}
+
+.project-details li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #007BFF;
+}
+
+.tech-stack {
+  color: #007BFF;
+  font-weight: 500;
+}
+
+/* Align text in the right column to the right */
+.project-entry > div:last-child {
+  text-align: right;
+}
+
+/* Media query adjustments for projects */
+@media (max-width: 768px) {
+  .project-entry {
+    font-size: 0.75em; /* Match other sections' font size */
+  }
+
+  .project-details li {
+    margin-bottom: 3px; /* Slightly reduce spacing between bullet points */
+  }
 }
