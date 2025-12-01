@@ -151,17 +151,19 @@ p {
   margin: 10px 0;
 }
 
-.project-details li {
+.project-details {
   position: relative;
   padding-left: 15px;
   margin-bottom: 5px;
+  font-size: 0.9em;
+  color: #333;
 }
 
 .project-details li::before {
   content: "•";
   position: absolute;
   left: 0;
-  color: #007BFF;
+
 }
 
 .tech-stack {
@@ -183,4 +185,35 @@ p {
   .project-details li {
     margin-bottom: 3px; /* Slightly reduce spacing between bullet points */
   }
+  .job-description ul,
+  .job-description li {
+    margin-left: 0;       /* Remove extra left margin */
+    padding-left: 0;      /* Remove extra left padding */
+    list-style-position: inside;  /* Makes bullet closer to text */
+    text-align: left ;
+  }
+
 }
+
+/* Work Experience Styling */
+.job-title {
+  font-size: 0.9em;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.job-description {
+  font-size: 0.9em;
+  color: #333;
+}
+
+.job-description li {
+  margin-bottom: 4px;
+}
+
+.project-description {
+  font-size: 0.9em;
+  color: #333;
+}
+
