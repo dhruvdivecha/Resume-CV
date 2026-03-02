@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { motion } from "framer-motion";
 import { Minus, Square, X, Download, ExternalLink } from "lucide-react";
 
 export default function PdfViewer({
