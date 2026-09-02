@@ -38,6 +38,16 @@ export const EDUCATION = [
 
 export const EXPERIENCE = [
   {
+    company: "e-Government Authority (eGA)",
+    role: "Software Engineering Intern",
+    location: "Posta, Dar es Salaam",
+    period: "August 2026 – Present",
+    bullets: [
+      "Working on Linux kernel customisation; project specifics under NDA.",
+      "Configuring and building modified kernel images, with validation testing in progress.",
+    ],
+  },
+  {
     company: "Neurotech Africa",
     role: "Chatbot Developer Intern",
     location: "Sky-City Mall, Dar es Salaam",
@@ -101,7 +111,6 @@ export const SKILLS = [
       "cron",
       "Nginx",
       "Cloudflare Tunnel",
-      "AdGuard Home",
       "Portainer",
       "Backup & disaster recovery",
     ],
@@ -112,13 +121,7 @@ export const SKILLS = [
   },
   {
     label: "Networking",
-    items: [
-      "Reverse proxies & TLS termination",
-      "DNS",
-      "ARP / L2 troubleshooting",
-      "udev rules",
-      "ip · iw · dig",
-    ],
+    items: ["Reverse proxies & TLS termination", "DNS"],
   },
   {
     label: "Tools",
@@ -176,34 +179,6 @@ export const PROJECT_GROUPS = [
           "systemd",
           "Portainer",
           "Jellyfin",
-        ],
-      },
-      {
-        name: "Network Troubleshooting & Optimization",
-        summary:
-          "Diagnosed and fixed a set of ISP-, router- and driver-level faults that were degrading the whole network.",
-        bullets: [
-          "Identified ISP-level DPI throttling against YouTube and Docker Hub CDNs and routed around it.",
-          "Traced router client-isolation failures down to the ARP layer and re-architected the LAN to restore host-to-host reachability.",
-          "Fixed a WiFi radio power-save defect with custom udev rules, and deployed AdGuard Home with encrypted upstream resolvers.",
-        ],
-        tech: ["ARP/L2 debugging", "udev", "AdGuard Home", "DNS-over-TLS", "ip · iw · dig"],
-      },
-      {
-        name: "TV Kiosk System with Remote Control",
-        summary:
-          "A full-screen browser kiosk driving a TV, steered from a phone over a custom WebSocket remote.",
-        bullets: [
-          "Built an X11 + Helium browser kiosk launched and supervised as auto-restarting systemd services.",
-          "Wrote a phone-based remote that drives page navigation through the Chrome DevTools Protocol over WebSockets.",
-          "Served the companion streaming app locally in Python, with source deployed from GitHub over SSH deploy keys.",
-        ],
-        tech: [
-          "Python",
-          "WebSockets",
-          "Chrome DevTools Protocol",
-          "X11",
-          "systemd",
         ],
       },
     ],
