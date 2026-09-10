@@ -81,10 +81,12 @@ export const SKILLS = [
       "React",
       "Node.js",
       "Express",
+      "Hono",
       "FastAPI",
       "React Native",
       "Refine",
       "Tailwind CSS",
+      "Vite",
       "RESTful API design",
     ],
   },
@@ -110,14 +112,35 @@ export const SKILLS = [
       "systemd",
       "cron",
       "Nginx",
+      "Cloudflare Workers & Pages",
       "Cloudflare Tunnel",
+      "Edge computing",
       "Portainer",
       "Backup & disaster recovery",
     ],
   },
   {
     label: "Databases",
-    items: ["PostgreSQL", "MySQL", "MongoDB", "Redis", "Drizzle ORM"],
+    items: [
+      "PostgreSQL",
+      "MySQL",
+      "SQLite / Cloudflare D1",
+      "MongoDB",
+      "Redis",
+      "Drizzle ORM",
+      "SQL aggregate design",
+      "Schema migrations",
+    ],
+  },
+  {
+    label: "Security",
+    items: [
+      "Role-based access control (RBAC)",
+      "JWT & httpOnly cookie sessions",
+      "PBKDF2 / Web Crypto password hashing",
+      "CSRF & CORS hardening",
+      "Rate limiting",
+    ],
   },
   {
     label: "Networking",
@@ -129,6 +152,8 @@ export const SKILLS = [
       "Git & GitHub",
       "SSH / deploy keys",
       "Postman",
+      "Playwright",
+      "npm workspaces",
       "Google Sheets API",
       "WebSockets",
       "Chrome DevTools Protocol",
@@ -141,6 +166,33 @@ export const SKILLS = [
    ────────────────────────────────────────────────────────────── */
 
 export const PROJECT_GROUPS = [
+  {
+    id: "web",
+    title: "Web Applications",
+    projects: [
+      {
+        name: "Tuition Business Management System",
+        note: "Built solo for a tutoring business · internal deployment, staff and admin only",
+        summary:
+          "A full-stack tuition platform on Cloudflare’s edge, replacing the spreadsheet a tutoring business used to track sessions, teacher payouts and student debt.",
+        bullets: [
+          "Two-role (admin / teacher) platform: React 19 + TypeScript front end, Hono + Drizzle API on Cloudflare Workers, D1 SQLite database.",
+          "Derived-ledger model with no stored balances — revenue, teacher earnings and student debt are computed at query time from SQL aggregates, money held as integer shillings with a 50/50 split that reconciles exactly.",
+          "Swapped bcrypt for PBKDF2-HMAC-SHA256 over Web Crypto after bcryptjs exceeded the Workers 10 ms CPU limit, versioning the work factor in each hash so it can be raised without password resets.",
+          "httpOnly JWT sessions with role-guard middleware that re-reads the user per request, Origin rejection on unsafe methods and edge rate limiting; covered by a 67-assertion money-path suite and a Playwright walk of every screen.",
+        ],
+        tech: [
+          "React 19",
+          "TypeScript",
+          "Hono",
+          "Drizzle ORM",
+          "Cloudflare Workers",
+          "D1 (SQLite)",
+          "Playwright",
+        ],
+      },
+    ],
+  },
   {
     id: "infrastructure",
     title: "Infrastructure & Self-Hosting",
@@ -248,46 +300,9 @@ export const PROJECT_GROUPS = [
     ],
   },
   {
-    id: "web",
-    title: "Web Applications",
+    id: "earlier",
+    title: "Earlier Projects",
     projects: [
-      {
-        name: "Zeusda’s School — Classroom Manager",
-        summary:
-          "A classroom management platform with role-based dashboards and access control for admins, teachers and students.",
-        bullets: [
-          "Role-based access for Admin, Teacher and Student with an adaptive sidebar and per-role dashboards.",
-          "Student join-request workflow gated by teacher and admin approval.",
-          "Express 5 backend on Neon PostgreSQL via Drizzle ORM, with Arcjet security.",
-          "Cloudinary image uploads, dark/light mode and a Cmd+K command palette.",
-          "Session-based authentication with Better Auth, plus CSRF protection and rate limiting.",
-        ],
-        tech: [
-          "React 19",
-          "TypeScript",
-          "Refine v5",
-          "shadcn/ui",
-          "Tailwind CSS v4",
-          "Better Auth",
-          "Drizzle ORM",
-          "PostgreSQL",
-          "Express 5",
-        ],
-        links: [
-          {
-            label: "Frontend",
-            href: "https://github.com/dhruvdivecha/Classroom-Frontend",
-          },
-          {
-            label: "Backend",
-            href: "https://github.com/dhruvdivecha/classroom-backend",
-          },
-          {
-            label: "Live Demo",
-            href: "https://classroom-frontend-teal.vercel.app/",
-          },
-        ],
-      },
       {
         name: "Modern Restaurant Management System",
         summary:
