@@ -171,6 +171,34 @@ export const PROJECT_GROUPS = [
     title: "Web Applications",
     projects: [
       {
+        name: "Purselo — Sales CRM for Small Businesses",
+        note: "Solo product, in early access · purselo.co.tz",
+        summary:
+          "A self-hostable CRM that keeps leads, follow-ups, a drag-and-drop pipeline and deal history in one place, built for small businesses in Tanzania that otherwise run sales out of WhatsApp and notebooks.",
+        bullets: [
+          "React 19 + TypeScript front end with a FastAPI / SQLAlchemy 2 API on PostgreSQL, shipped as three Docker Compose services behind Nginx with a strict CSP and only the front end exposed.",
+          "Reusable follow-up sequences that schedule the next conversation when a step completes, an attention dashboard for overdue and due-today work, and one-tap WhatsApp hand-off to the lead’s chat.",
+          "Argon2 password hashing, httpOnly session cookies, per-client login attempt limiting, forced password rotation for provisioned accounts and an Alembic migration chain verified by a downgrade/upgrade round trip in CI.",
+          "Covered by pytest API tests and Playwright end-to-end flows run against the real Compose stack on every push; scripted nightly backups with rotation for self-hosted installs.",
+        ],
+        tech: [
+          "React 19",
+          "TypeScript",
+          "FastAPI",
+          "SQLAlchemy 2",
+          "PostgreSQL",
+          "Alembic",
+          "Docker Compose",
+          "Nginx",
+          "Playwright",
+          "pytest",
+        ],
+        links: [
+          { label: "Website", href: "https://purselo.co.tz" },
+          { label: "Live Demo", href: "https://demo.purselo.co.tz/" },
+        ],
+      },
+      {
         name: "Tuition Business Management System",
         note: "Built solo for a tutoring business · internal deployment, staff and admin only",
         summary:
@@ -295,33 +323,6 @@ export const PROJECT_GROUPS = [
           "DeepSeek V4 Flash",
           "Tool calling",
           "Google Sheets API",
-        ],
-      },
-    ],
-  },
-  {
-    id: "earlier",
-    title: "Earlier Projects",
-    projects: [
-      {
-        name: "Modern Restaurant Management System",
-        summary:
-          "A real-time restaurant operations platform covering ordering, the kitchen floor and owner analytics.",
-        bullets: [
-          "Real-time order tracking and kitchen management over WebSockets.",
-          "Owner dashboard with menu management and sales analytics.",
-          "Customer-facing interactive menu that updates live as the kitchen responds.",
-        ],
-        tech: ["React 18", "TypeScript", "WebSockets", "Node.js"],
-        links: [
-          {
-            label: "GitHub",
-            href: "https://github.com/dhruvdivecha/RestaurantApp",
-          },
-          {
-            label: "Live Demo",
-            href: "https://restaurantapp-frontend-zptb.onrender.com/",
-          },
         ],
       },
     ],
