@@ -64,7 +64,7 @@ export const EXPERIENCE = [
     location: "Upanga, Dar es Salaam",
     period: "January 2025 – Present",
     bullets: [
-      "Tutored 30+ students in Chemistry, Mathematics and Physics.",
+      "Tutored 100+ students in Chemistry, Mathematics and Physics.",
       "Improved student grades through targeted revision and past-paper drilling.",
     ],
   },
