@@ -10,11 +10,11 @@ export const PROFILE = {
   email: "dhruv.divecha23@gmail.com",
   phone: "+255 785 511 991",
   linkedin: {
-    label: "linkedin.com/in/dhruv-divecha-054618320",
+    label: "LinkedIn",
     href: "https://www.linkedin.com/in/dhruv-divecha-054618320",
   },
   github: {
-    label: "github.com/dhruvdivecha",
+    label: "GitHub",
     href: "https://github.com/dhruvdivecha",
   },
 };
@@ -172,7 +172,7 @@ export const PROJECT_GROUPS = [
     projects: [
       {
         name: "Purselo — Sales CRM for Small Businesses",
-        note: "Solo product, in early access · purselo.co.tz",
+        note: "Solo product · purselo.co.tz",
         summary:
           "A self-hostable CRM that keeps leads, follow-ups, a drag-and-drop pipeline and deal history in one place, built for small businesses in Tanzania that otherwise run sales out of WhatsApp and notebooks.",
         bullets: [
