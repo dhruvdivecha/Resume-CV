@@ -41,10 +41,11 @@ export const EXPERIENCE = [
     company: "e-Government Authority (eGA)",
     role: "Software Engineering Intern",
     location: "Posta, Dar es Salaam",
-    period: "August 2026 – Present",
+    period: "August 2026 – October 2026",
     bullets: [
-      "Working on Linux kernel customisation; project specifics under NDA.",
-      "Configuring and building modified kernel images, with validation testing in progress.",
+      "Worked on Linux kernel customisation; project specifics under NDA.",
+      "Configured and built modified kernel images and contributed to validation testing.",
+      "Worked with Debian desktop environments, including KDE Plasma, and Linux file-system structure.",
     ],
   },
   {
